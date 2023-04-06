@@ -683,7 +683,7 @@ ul#footer-list li {
 }
 
 .card-container {
-  background: linear-gradient(180.45deg, rgba(38, 38, 38, 0) 0.75%, rgba(38, 38, 38, 0.9) 61.94%); 
+  background: linear-gradient(180.45deg, rgba(38, 38, 38, 0) 0.75%, rgba(38, 38, 38, 0.9) 61.94%);
   width: 327px;
   justify-self: center;
   height: 100%;
@@ -792,6 +792,5 @@ ul#footer-list li {
   color: #f02031ef;
   letter-spacing: 0.5px;
 }
-
 
 /* background: linear-gradient(180.45deg, rgba(38, 38, 38, 0) 0.75%, rgba(38, 38, 38, 0.9) 61.94%), url(../images/5_card-img.png); */

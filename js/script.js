@@ -41,24 +41,24 @@ function controlMobileMenu() {
       addDate: 'April 05, 2023',
       projectId: 1,
     },
-    // {
-    //   img: './images/0_FontImage.png',
-    //   name: 'Professional Art Printing Data-2',
-    //   description:
-    //     'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
-    //   technologies: ['html', 'css', 'javascript'],
-    //   addDate: 'March 05, 2023',
-    //   projectId: 2,
-    // },
-    // {
-    //   img: './images/0_FontImage.png',
-    //   name: 'Professional Art Printing Data-3',
-    //   description:
-    //     'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
-    //   technologies: ['html', 'css', 'javascript'],
-    //   addDate: 'February 05, 2023',
-    //   projectId: 3,
-    // },
+    {
+      img: './images/0_FontImage.png',
+      name: 'Professional Art Printing Data-2',
+      description:
+        'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
+      technologies: ['html', 'css', 'javascript'],
+      addDate: 'March 05, 2023',
+      projectId: 2,
+    },
+    {
+      img: './images/0_FontImage.png',
+      name: 'Professional Art Printing Data-3',
+      description:
+        'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
+      technologies: ['html', 'css', 'javascript'],
+      addDate: 'February 05, 2023',
+      projectId: 3,
+    },
 
     {
       img: './images/0_FontImage.png',
@@ -67,7 +67,7 @@ function controlMobileMenu() {
         'To-do list" is a Single Page Application that helps to organize daily task.It simply lists the things that one needs to do and allows one to mark them as complete. Built with Javascript, HTML, & CSS. Styled by <a href = "https://www.youtube.com/watch?v=AcUd-_Yjjqg"> Emilia Andrzejewska</a>.This SPA has been built and deployed using webpack.',
       technologies: ['html', 'css', 'javascript'],
       addDate: 'January 01, 2023',
-      projectId: 2,
+      projectId: 4,
       seeLive: 'xyz',
       See: 'Source',
     },
@@ -75,7 +75,7 @@ function controlMobileMenu() {
 
   // My Recent Work Starts Here
   details.forEach((item) => {
-    if (item.projectId == details.length) {
+    if (item.projectId === details.length) {
       const myRecentProjectDetails = `
       <div class="mrwImgDesktop">
         <img src="${item.img}" alt="my-recent-project-image" />
@@ -97,12 +97,11 @@ function controlMobileMenu() {
           <button class="mrwSeeProjectBtn" id='mrwSeeProjectButton'>See Project</button>
         </div>
       </div>
-      `
+      `;
       document.querySelector('.myRecentWrokBottom').innerHTML = myRecentProjectDetails;
-     }    
+    }
   });
-// My Recent Work Ends Here
-
+  // My Recent Work Ends Here
 
   // create cards dynamically for each project from  DETAILS array on page load
   details.forEach((detail) => {
@@ -115,6 +114,7 @@ function controlMobileMenu() {
       const cardContainer = document.createElement('div');
       cardDetails.appendChild(cardContainer);
       cardContainer.classList.add('card-container');
+      // eslint-disable-line no-return-assign
       cardContainer.setAttribute(`style`, `background-image:url(${detail.img});`);
       // for the card title
       const cardTitle = document.createElement('div');
@@ -145,7 +145,6 @@ function controlMobileMenu() {
       technologiesUl.classList.add('mrwWrapper');
       cardContainer.appendChild(technologiesUl);
 
-
       // create the see project button
       const cardProjectButton = document.createElement('div');
       cardProjectButton.classList.add('card-project-btn');
@@ -156,10 +155,13 @@ function controlMobileMenu() {
       detailButton.textContent = 'See Project';
 
       // handle remove technologies lists from popup
+      // eslint-disable-line no-return-assign
       function removeTechnologiesList() {
         const technologiesList = document.querySelector('#technologiesList');
         const removeElement = document.querySelector('#technologiesList li');
-        if (removeElement !== null) technologiesList.removeChild(removeElement);
+        if (removeElement !== null) {
+          technologiesList.removeChild(removeElement);
+        }
       }
       removeTechnologiesList();
 
@@ -177,7 +179,7 @@ function controlMobileMenu() {
         detail.technologies.forEach((technology) => {
           el += `
             <li class="popup-box">${technology}</li>
-          `
+          `;
         });
         technologiesList.innerHTML = el;
         // update the popup description text based on the projects card text
@@ -196,10 +198,11 @@ function controlMobileMenu() {
     }
   });
 }
+
 // Dynamic Card ends here
 controlMobileMenu();
 
-//Form Validation and Local Storage Start Here
+// Form Validation and Local Storage Start Here
 function ReadElement(selected) {
   return document.querySelector(selected);
 }
@@ -258,6 +261,3 @@ function EmailValidation(e) {
 submitbtn.addEventListener('submit', EmailValidation);
 
 // Form Validation and Local Storage END here
-
-
-
