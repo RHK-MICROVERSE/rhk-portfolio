@@ -1,101 +1,101 @@
 function controlMobileMenu() {
-  const open = document.getElementById('mobile-nav');
-  const close = document.getElementById('close-menu');
-  const portfolio = document.getElementById('mobile-portfolio');
-  const about = document.getElementById('mobile-about');
-  const contact = document.getElementById('mobile-contact');
+  const open = document.getElementById("mobile-nav");
+  const close = document.getElementById("close-menu");
+  const portfolio = document.getElementById("mobile-portfolio");
+  const about = document.getElementById("mobile-about");
+  const contact = document.getElementById("mobile-contact");
   function openMenu() {
-    const menu = document.querySelector('#mobile-menu');
-    menu.classList.remove('invisible');
-    menu.classList.add('visible');
+    const menu = document.querySelector("#mobile-menu");
+    menu.classList.remove("invisible");
+    menu.classList.add("visible");
   }
   function closeMenu() {
-    const menu = document.querySelector('#mobile-menu');
-    menu.classList.remove('visible');
-    menu.classList.add('invisible');
+    const menu = document.querySelector("#mobile-menu");
+    menu.classList.remove("visible");
+    menu.classList.add("invisible");
   }
-  open.addEventListener('click', () => {
+  open.addEventListener("click", () => {
     openMenu();
   });
-  close.addEventListener('click', () => {
+  close.addEventListener("click", () => {
     closeMenu();
   });
-  portfolio.addEventListener('click', () => {
+  portfolio.addEventListener("click", () => {
     closeMenu();
   });
-  about.addEventListener('click', () => {
+  about.addEventListener("click", () => {
     closeMenu();
   });
-  contact.addEventListener('click', () => {
+  contact.addEventListener("click", () => {
     closeMenu();
   });
   // =========================================
 
   const details = [
     {
-      img: './images/3A_background_for_main_program.png',
-      name: 'GLOBAL SUMMIT 2023',
+      img: "./images/3A_background_for_main_program.png",
+      name: "GLOBAL SUMMIT 2023",
       description:
         '"A joyful celebration believing in the value of openness and sharing, creating a positive change with people from over 80 countries is taking place in October, in Korea.',
-      technologies: ['html', 'css', 'javascript'],
-      addDate: 'April 05, 2023',
+      technologies: ["html", "css", "javascript"],
+      addDate: "April 05, 2023",
       projectId: 1,
     },
     {
-      img: './images/5_card-img.png',
-      name: 'Professional Art Printing Data-2',
+      img: "./images/5_card-img.png",
+      name: "Professional Art Printing Data-2",
       description:
-        'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
-      technologies: ['html', 'css', 'javascript'],
-      addDate: 'March 05, 2023',
+        "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+      technologies: ["html", "css", "javascript"],
+      addDate: "March 05, 2023",
       projectId: 2,
     },
     {
-      img: './images/5_card-img.png',
-      name: 'Professional Art Printing Data-3',
+      img: "./images/5_card-img.png",
+      name: "Professional Art Printing Data-3",
       description:
-        'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
-      technologies: ['html', 'css', 'javascript'],
-      addDate: 'February 05, 2023',
+        "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+      technologies: ["html", "css", "javascript"],
+      addDate: "February 05, 2023",
       projectId: 3,
     },
     {
-      img: './images/5_card-img.png',
-      name: 'Professional Art Printing Data-3',
+      img: "./images/5_card-img.png",
+      name: "Professional Art Printing Data-3",
       description:
-        'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
-      technologies: ['html', 'css', 'javascript'],
-      addDate: 'February 05, 2023',
+        "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+      technologies: ["html", "css", "javascript"],
+      addDate: "February 05, 2023",
       projectId: 3,
     },
     {
-      img: './images/5_card-img.png',
-      name: 'Professional Art Printing Data-3',
+      img: "./images/5_card-img.png",
+      name: "Professional Art Printing Data-3",
       description:
-        'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
-      technologies: ['html', 'css', 'javascript'],
-      addDate: 'February 05, 2023',
+        "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+      technologies: ["html", "css", "javascript"],
+      addDate: "February 05, 2023",
       projectId: 3,
     },
     {
-      img: './images/5_card-img.png',
-      name: 'Professional Art Printing Data-3',
+      img: "./images/5_card-img.png",
+      name: "Professional Art Printing Data-3",
       description:
-        'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
-      technologies: ['html', 'css', 'javascript'],
-      addDate: 'February 05, 2023',
+        "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+      technologies: ["html", "css", "javascript"],
+      addDate: "February 05, 2023",
       projectId: 3,
     },
     {
-      img: './images/0_FontImage.png',
-      name: 'To Do List',
+      img: "./images/0_FontImage.png",
+      name: "To Do List",
       description:
         'To-do list" is a Single Page Application that helps to organize daily task.It simply lists the things that one needs to do and allows one to mark them as complete. Built with Javascript, HTML, & CSS. Styled by <a href = "https://www.youtube.com/watch?v=AcUd-_Yjjqg"> Emilia Andrzejewska</a>.This SPA has been built and deployed using webpack.',
-      technologies: ['html', 'css', 'javascript'],
-      addDate: 'January 01, 2023',
+      technologies: ["html", "css", "javascript"],
+      addDate: "January 01, 2023",
       projectId: 7,
-      seeLive: 'xyz',
-      See: 'Source',
+      seeLive: "xyz",
+      See: "Source",
     },
   ];
 
@@ -124,85 +124,89 @@ function controlMobileMenu() {
         </div>
       </div>
       `;
-      document.querySelector('.myRecentWrokBottom').innerHTML = myRecentProjectDetails;
+      document.querySelector(".myRecentWrokBottom").innerHTML =
+        myRecentProjectDetails;
     }
   });
   // My Recent Work Ends Here
 
-   // handle remove technologies lists from popup
-      // eslint-disable-line no-return-assign
-      function removeTechnologiesList() {
-        const technologiesList = document.querySelector('#technologiesList');
-        const removeElement = document.querySelector('#technologiesList li');
-        if (removeElement !== null) {
-          technologiesList.removeChild(removeElement);
-        }
-      }
-      
+  // handle remove technologies lists from popup
+  // eslint-disable-line no-return-assign
+  function removeTechnologiesList() {
+    const technologiesList = document.querySelector("#technologiesList");
+    const removeElement = document.querySelector("#technologiesList li");
+    if (removeElement !== null) {
+      technologiesList.removeChild(removeElement);
+    }
+  }
+
   // create cards dynamically for each project from  DETAILS array on page load
   details.forEach((detail) => {
     if (detail.projectId < details.length) {
       // create project sections (cards)
-      const cardMaster = document.querySelector('#card-master');
-      const cardDetails = document.createElement('div');
-      cardDetails.classList.add('cards-details');
+      const cardMaster = document.querySelector("#card-master");
+      const cardDetails = document.createElement("div");
+      cardDetails.classList.add("cards-details");
       cardMaster.appendChild(cardDetails);
-      const cardContainer = document.createElement('div');
+      const cardContainer = document.createElement("div");
       cardDetails.appendChild(cardContainer);
-      cardContainer.classList.add('card-container');
+      cardContainer.classList.add("card-container");
       // eslint-disable-line no-return-assign
-      cardContainer.setAttribute('style', `background-image:url(${detail.img});`);
+      cardContainer.setAttribute(
+        "style",
+        `background-image:url(${detail.img});`
+      );
       // for the card title
-      const cardTitle = document.createElement('div');
-      cardTitle.classList.add('card-title');
+      const cardTitle = document.createElement("div");
+      cardTitle.classList.add("card-title");
       cardContainer.appendChild(cardTitle);
-      const cardTitleh1 = document.createElement('h1');
+      const cardTitleh1 = document.createElement("h1");
       cardTitle.appendChild(cardTitleh1);
       cardTitleh1.innerText = detail.name;
       // for the subcard / description
-      const cardSubText = document.createElement('div');
-      cardSubText.classList.add('card-sup-txt');
+      const cardSubText = document.createElement("div");
+      cardSubText.classList.add("card-sup-txt");
       cardContainer.appendChild(cardSubText);
-      const cardDescription = document.createElement('p');
-      cardDescription.classList.add('card-description');
+      const cardDescription = document.createElement("p");
+      cardDescription.classList.add("card-description");
       cardSubText.appendChild(cardDescription);
       cardDescription.textContent = detail.description;
       // create the technologies section
-      const technologies = document.createElement('div');
-      technologies.classList.add('technologies');
-      const technologiesUl = document.createElement('ul');
+      const technologies = document.createElement("div");
+      technologies.classList.add("technologies");
+      const technologiesUl = document.createElement("ul");
       // create technologies lists in the card
       detail.technologies.forEach((technology) => {
-        const techLi = document.createElement('li');
+        const techLi = document.createElement("li");
         technologiesUl.appendChild(techLi);
-        techLi.classList.add('card-box');
+        techLi.classList.add("card-box");
         techLi.textContent = technology;
       });
-      technologiesUl.classList.add('mrwWrapper');
+      technologiesUl.classList.add("mrwWrapper");
       cardContainer.appendChild(technologiesUl);
 
       // create the see project button
-      const cardProjectButton = document.createElement('div');
-      cardProjectButton.classList.add('card-project-btn');
+      const cardProjectButton = document.createElement("div");
+      cardProjectButton.classList.add("card-project-btn");
       cardContainer.appendChild(cardProjectButton);
-      const detailButton = document.createElement('button');
-      detailButton.classList.add('card-button-see-project');
+      const detailButton = document.createElement("button");
+      detailButton.classList.add("card-button-see-project");
       cardProjectButton.appendChild(detailButton);
-      detailButton.textContent = 'See Project';
+      detailButton.textContent = "See Project";
 
       removeTechnologiesList();
 
       // CLICK EVENT FOR 'See Project'
-      const detailsPopup = document.querySelector('#popup');
-      cardProjectButton.addEventListener('click', () => {
-        detailsPopup.classList.remove('hide');
-        detailsPopup.classList.add('show');
+      const detailsPopup = document.querySelector("#popup");
+      cardProjectButton.addEventListener("click", () => {
+        detailsPopup.classList.remove("hide");
+        detailsPopup.classList.add("show");
         // update content of popup based on clicked project card
-        const popupTitle = document.querySelector('#popupTitle');
+        const popupTitle = document.querySelector("#popupTitle");
         popupTitle.textContent = detail.name;
         // update technologies lists based on the content on the selected card
-        const technologiesList = document.querySelector('#technologiesList');
-        let el = '';
+        const technologiesList = document.querySelector("#technologiesList");
+        let el = "";
         detail.technologies.forEach((technology) => {
           el += `
             <li class="popup-box">${technology}</li>
@@ -210,15 +214,15 @@ function controlMobileMenu() {
         });
         technologiesList.innerHTML = el;
         // update the popup description text based on the projects card text
-        const popupText = document.querySelector('#popup-text p');
-        popupText.textContent = '';
+        const popupText = document.querySelector("#popup-text p");
+        popupText.textContent = "";
         popupText.textContent = detail.description;
       });
       // handle closing details popup
-      const closePopups = document.querySelector('#close-cross');
-      closePopups.addEventListener('click', () => {
-        detailsPopup.classList.remove('show');
-        detailsPopup.classList.add('hide');
+      const closePopups = document.querySelector("#close-cross");
+      closePopups.addEventListener("click", () => {
+        detailsPopup.classList.remove("show");
+        detailsPopup.classList.add("hide");
         // remove technologies list items up on closing the popup
         removeTechnologiesList();
       });
@@ -234,11 +238,11 @@ function ReadElement(selected) {
   return document.querySelector(selected);
 }
 
-const uname = ReadElement('#name-input');
-const uemail = ReadElement('#user-email');
-const umessage = ReadElement('#textarea-input');
-const validator = ReadElement('.validator-input');
-const submitbtn = ReadElement('#submit-form');
+const uname = ReadElement("#name-input");
+const uemail = ReadElement("#user-email");
+const umessage = ReadElement("#textarea-input");
+const validator = ReadElement(".validator-input");
+const submitbtn = ReadElement("#submit-form");
 
 let visitorName;
 let visitorEmail;
@@ -251,17 +255,17 @@ function getUpdatedInput(selected) {
     visitorEmail = uemail.value;
     visitorMessage = umessage.value;
     visitorData = [visitorName, visitorEmail, visitorMessage];
-    localStorage.setItem('visitorData', visitorData);
+    localStorage.setItem("visitorData", visitorData);
   }
-  selected.addEventListener('change', alphaFunction);
+  selected.addEventListener("change", alphaFunction);
 }
 
 visitorName = getUpdatedInput(uname);
 visitorEmail = getUpdatedInput(uemail);
 visitorMessage = getUpdatedInput(umessage);
 
-const alphaFormData = localStorage.getItem('visitorData');
-const alphaFormDataArray = alphaFormData.split(',');
+const alphaFormData = localStorage.getItem("visitorData");
+const alphaFormDataArray = alphaFormData.split(",");
 
 if (alphaFormDataArray.length > 0) {
   [uname.value, uemail.value, umessage.value] = alphaFormDataArray;
@@ -270,21 +274,21 @@ if (alphaFormDataArray.length > 0) {
 function EmailValidation(e) {
   const visitorEmail = uemail.value;
   let text;
-  if (visitorEmail !== visitorEmail.toLowerCase() || visitorEmail === '') {
-    text = 'Email is required and email has to be in lowercase';
+  if (visitorEmail !== visitorEmail.toLowerCase() || visitorEmail === "") {
+    text = "Email is required and email has to be in lowercase";
     validator.innerHTML = text;
-    validator.classList.remove('validator-green');
-    validator.classList.add('validator-red');
-    submitbtn.style.marginTop = '20px';
+    validator.classList.remove("validator-green");
+    validator.classList.add("validator-red");
+    submitbtn.style.marginTop = "20px";
     e.preventDefault();
   } else {
-    text = 'Email has been inserted in lowercase as required';
+    text = "Email has been inserted in lowercase as required";
     validator.innerHTML = text;
-    validator.classList.remove('validator-red');
-    validator.classList.add('validator-green');
-    submitbtn.style.marginTop = '20px';
+    validator.classList.remove("validator-red");
+    validator.classList.add("validator-green");
+    submitbtn.style.marginTop = "20px";
   }
 }
-submitbtn.addEventListener('submit', EmailValidation);
+submitbtn.addEventListener("submit", EmailValidation);
 
 // Form Validation and Local Storage END here
