@@ -42,7 +42,7 @@ function controlMobileMenu() {
       projectId: 1,
     },
     {
-      img: './images/0_FontImage.png',
+      img: './images/5_card-img.png',
       name: 'Professional Art Printing Data-2',
       description:
         'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
@@ -51,7 +51,7 @@ function controlMobileMenu() {
       projectId: 2,
     },
     {
-      img: './images/0_FontImage.png',
+      img: './images/5_card-img.png',
       name: 'Professional Art Printing Data-3',
       description:
         'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
@@ -59,7 +59,33 @@ function controlMobileMenu() {
       addDate: 'February 05, 2023',
       projectId: 3,
     },
-
+    {
+      img: './images/5_card-img.png',
+      name: 'Professional Art Printing Data-3',
+      description:
+        'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
+      technologies: ['html', 'css', 'javascript'],
+      addDate: 'February 05, 2023',
+      projectId: 3,
+    },
+    {
+      img: './images/5_card-img.png',
+      name: 'Professional Art Printing Data-3',
+      description:
+        'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
+      technologies: ['html', 'css', 'javascript'],
+      addDate: 'February 05, 2023',
+      projectId: 3,
+    },
+    {
+      img: './images/5_card-img.png',
+      name: 'Professional Art Printing Data-3',
+      description:
+        'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
+      technologies: ['html', 'css', 'javascript'],
+      addDate: 'February 05, 2023',
+      projectId: 3,
+    },
     {
       img: './images/0_FontImage.png',
       name: 'To Do List',
@@ -67,7 +93,7 @@ function controlMobileMenu() {
         'To-do list" is a Single Page Application that helps to organize daily task.It simply lists the things that one needs to do and allows one to mark them as complete. Built with Javascript, HTML, & CSS. Styled by <a href = "https://www.youtube.com/watch?v=AcUd-_Yjjqg"> Emilia Andrzejewska</a>.This SPA has been built and deployed using webpack.',
       technologies: ['html', 'css', 'javascript'],
       addDate: 'January 01, 2023',
-      projectId: 4,
+      projectId: 7,
       seeLive: 'xyz',
       See: 'Source',
     },
