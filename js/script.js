@@ -193,7 +193,6 @@ function controlMobileMenu() {
       removeTechnologiesList();
 
       // CLICK EVENT FOR 'See Project'
-      const firstButton = document.querySelector('.mrwSeeProjectBtn');
       const detailsPopup = document.querySelector('#popup');
       cardProjectButton.addEventListener('click', () => {
         detailsPopup.classList.remove('hide');
@@ -210,16 +209,16 @@ function controlMobileMenu() {
           `;
         });
         technologiesList.innerHTML = el;
-        //update the image of the popup
-        document.querySelector('.img-snapshot-desktop').setAttribute('src',`${detail.img}`);
+        // update the image of the popup
+        document.querySelector('.img-snapshot-desktop').setAttribute('src', `${detail.img}`);
         document.querySelector('.img-snapshot-desktop').setAttribute('width', '400px');
-        document.querySelector('.img-snapshot-desktop').setAttribute('height','400px');
+        document.querySelector('.img-snapshot-desktop').setAttribute('height', '400px');
         // update the popup description text based on the projects card text
         const popupText = document.querySelector('#popup-text p');
         popupText.textContent = '';
         popupText.textContent = detail.description;
       });
-      
+
       // handle closing details popup
       const closePopups = document.querySelector('#close-cross');
       closePopups.addEventListener('click', () => {
@@ -228,7 +227,7 @@ function controlMobileMenu() {
         // remove technologies list items up on closing the popup
         removeTechnologiesList();
       });
-    } else if (detail.projectId === details.length){
+    } else if (detail.projectId === details.length) {
       const firstButton = document.querySelector('.mrwSeeProjectBtn');
       const detailsPopup = document.querySelector('#popup');
       firstButton.addEventListener('click', () => {
@@ -246,8 +245,8 @@ function controlMobileMenu() {
           `;
         });
         technologiesList.innerHTML = el;
-        //update the image of the popup
-        document.querySelector('.img-snapshot-desktop').setAttribute('src',`${detail.img}`);
+        // update the image of the popup
+        document.querySelector('.img-snapshot-desktop').setAttribute('src', `${detail.img}`);
         // update the popup description text based on the projects card text
         const popupText = document.querySelector('#popup-text p');
         popupText.textContent = '';
