@@ -129,6 +129,16 @@ function controlMobileMenu() {
   });
   // My Recent Work Ends Here
 
+   // handle remove technologies lists from popup
+      // eslint-disable-line no-return-assign
+      function removeTechnologiesList() {
+        const technologiesList = document.querySelector('#technologiesList');
+        const removeElement = document.querySelector('#technologiesList li');
+        if (removeElement !== null) {
+          technologiesList.removeChild(removeElement);
+        }
+      }
+      
   // create cards dynamically for each project from  DETAILS array on page load
   details.forEach((detail) => {
     if (detail.projectId < details.length) {
@@ -141,7 +151,7 @@ function controlMobileMenu() {
       cardDetails.appendChild(cardContainer);
       cardContainer.classList.add('card-container');
       // eslint-disable-line no-return-assign
-      cardContainer.setAttribute(`style`, `background-image:url(${detail.img});`);
+      cardContainer.setAttribute('style', `background-image:url(${detail.img});`);
       // for the card title
       const cardTitle = document.createElement('div');
       cardTitle.classList.add('card-title');
@@ -180,15 +190,6 @@ function controlMobileMenu() {
       cardProjectButton.appendChild(detailButton);
       detailButton.textContent = 'See Project';
 
-      // handle remove technologies lists from popup
-      // eslint-disable-line no-return-assign
-      function removeTechnologiesList() {
-        const technologiesList = document.querySelector('#technologiesList');
-        const removeElement = document.querySelector('#technologiesList li');
-        if (removeElement !== null) {
-          technologiesList.removeChild(removeElement);
-        }
-      }
       removeTechnologiesList();
 
       // CLICK EVENT FOR 'See Project'
