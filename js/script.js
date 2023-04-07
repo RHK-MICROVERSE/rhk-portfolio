@@ -138,7 +138,7 @@ function controlMobileMenu() {
       technologiesList.removeChild(removeElement);
     }
   }
-  
+
   // create cards dynamically for each project from  DETAILS array on page load
   details.forEach((detail) => {
     if (detail.projectId < details.length) {
