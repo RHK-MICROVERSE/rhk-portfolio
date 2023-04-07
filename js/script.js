@@ -118,7 +118,6 @@ function controlMobileMenu() {
           <li class='mrwBox'>${item.technologies[1]}</li>
           <li class='mrwBox'>${item.technologies[2]}</li>
         </ul>
-
         <div class="mrwBtnContiner">
           <button class="mrwSeeProjectBtn" id='mrwSeeProjectButton'>See Project</button>
         </div>
@@ -127,6 +126,7 @@ function controlMobileMenu() {
       document.querySelector('.myRecentWrokBottom').innerHTML = myRecentProjectDetails;
     }
   });
+
   // My Recent Work Ends Here
 
   // handle remove technologies lists from popup
@@ -193,6 +193,7 @@ function controlMobileMenu() {
       removeTechnologiesList();
 
       // CLICK EVENT FOR 'See Project'
+      const firstButton = document.querySelector('.mrwSeeProjectBtn');
       const detailsPopup = document.querySelector('#popup');
       cardProjectButton.addEventListener('click', () => {
         detailsPopup.classList.remove('hide');
@@ -209,11 +210,16 @@ function controlMobileMenu() {
           `;
         });
         technologiesList.innerHTML = el;
+        //update the image of the popup
+        document.querySelector('.img-snapshot-desktop').setAttribute('src',`${detail.img}`);
+        document.querySelector('.img-snapshot-desktop').setAttribute('width', '400px');
+        document.querySelector('.img-snapshot-desktop').setAttribute('height','400px');
         // update the popup description text based on the projects card text
         const popupText = document.querySelector('#popup-text p');
         popupText.textContent = '';
         popupText.textContent = detail.description;
       });
+      
       // handle closing details popup
       const closePopups = document.querySelector('#close-cross');
       closePopups.addEventListener('click', () => {
@@ -221,6 +227,31 @@ function controlMobileMenu() {
         detailsPopup.classList.add('hide');
         // remove technologies list items up on closing the popup
         removeTechnologiesList();
+      });
+    } else if (detail.projectId === details.length){
+      const firstButton = document.querySelector('.mrwSeeProjectBtn');
+      const detailsPopup = document.querySelector('#popup');
+      firstButton.addEventListener('click', () => {
+        detailsPopup.classList.remove('hide');
+        detailsPopup.classList.add('show');
+        // update content of popup based on clicked project card
+        const popupTitle = document.querySelector('#popupTitle');
+        popupTitle.textContent = detail.name;
+        // update technologies lists based on the content on the selected card
+        const technologiesList = document.querySelector('#technologiesList');
+        let el = '';
+        detail.technologies.forEach((technology) => {
+          el += `
+            <li class="popup-box">${technology}</li>
+          `;
+        });
+        technologiesList.innerHTML = el;
+        //update the image of the popup
+        document.querySelector('.img-snapshot-desktop').setAttribute('src',`${detail.img}`);
+        // update the popup description text based on the projects card text
+        const popupText = document.querySelector('#popup-text p');
+        popupText.textContent = '';
+        popupText.textContent = detail.description;
       });
     }
   });
