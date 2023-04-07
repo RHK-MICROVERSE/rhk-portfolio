@@ -40,6 +40,8 @@ function controlMobileMenu() {
       technologies: ['html', 'css', 'javascript'],
       addDate: 'April 05, 2023',
       projectId: 1,
+      seeLive: 'https://rhk-microverse.github.io/Conference/',
+      seeSource: 'https://github.com/RHK-MICROVERSE/Conference',
     },
     {
       img: './images/5_card-img.png',
@@ -66,7 +68,7 @@ function controlMobileMenu() {
         'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
       technologies: ['html', 'css', 'javascript'],
       addDate: 'February 05, 2023',
-      projectId: 3,
+      projectId: 4,
     },
     {
       img: './images/5_card-img.png',
@@ -75,16 +77,16 @@ function controlMobileMenu() {
         'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
       technologies: ['html', 'css', 'javascript'],
       addDate: 'February 05, 2023',
-      projectId: 3,
+      projectId: 5,
     },
     {
       img: './images/5_card-img.png',
-      name: 'Professional Art Printing Data-3',
+      name: 'Professional Art Printing Data-6',
       description:
         'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
       technologies: ['html', 'css', 'javascript'],
       addDate: 'February 05, 2023',
-      projectId: 3,
+      projectId: 6,
     },
     {
       img: './images/0_FontImage.png',
@@ -94,8 +96,8 @@ function controlMobileMenu() {
       technologies: ['html', 'css', 'javascript'],
       addDate: 'January 01, 2023',
       projectId: 7,
-      seeLive: 'xyz',
-      See: 'Source',
+      seeLive: 'https://rhk-microverse.github.io/To-Do-List/',
+      seeSource: 'https://github.com/RHK-MICROVERSE/To-Do-List',
     },
   ];
 
@@ -213,6 +215,9 @@ function controlMobileMenu() {
         document.querySelector('.img-snapshot-desktop').setAttribute('src', `${detail.img}`);
         document.querySelector('.img-snapshot-desktop').setAttribute('width', '400px');
         document.querySelector('.img-snapshot-desktop').setAttribute('height', '400px');
+        // update the seeLive and seeSource
+        seeLive.setAttribute('href', `${detail.seeLive}`);
+        seeSource.setAttribute('href', `${detail.seeSource}`);
         // update the popup description text based on the projects card text
         const popupText = document.querySelector('#popup-text p');
         popupText.textContent = '';
@@ -230,6 +235,8 @@ function controlMobileMenu() {
     } else if (detail.projectId === details.length) {
       const firstButton = document.querySelector('.mrwSeeProjectBtn');
       const detailsPopup = document.querySelector('#popup');
+      const seeLive = document.querySelector('.seeLive');
+      const seeSource = document.querySelector('.seeSource');
       firstButton.addEventListener('click', () => {
         detailsPopup.classList.remove('hide');
         detailsPopup.classList.add('show');
@@ -247,6 +254,9 @@ function controlMobileMenu() {
         technologiesList.innerHTML = el;
         // update the image of the popup
         document.querySelector('.img-snapshot-desktop').setAttribute('src', `${detail.img}`);
+        // update the seeLive and seeSource
+        seeLive.setAttribute('href', `${detail.seeLive}`);
+        seeSource.setAttribute('href', `${detail.seeSource}`);
         // update the popup description text based on the projects card text
         const popupText = document.querySelector('#popup-text p');
         popupText.textContent = '';
@@ -289,6 +299,7 @@ document.querySelector('.details-popup').innerHTML = `<div class="popup-containe
       </div>
       <div class="popup-buttons">
         <div class="popup-button seelive">
+          <a class='seeLive' href=''>
           <p>See Live</p>
           <i class="see-live"
             ><img
@@ -296,8 +307,10 @@ document.querySelector('.details-popup').innerHTML = `<div class="popup-containe
               src="./images/23_see_live.png"
               alt="seelive"
           /></i>
+          </a>
         </div>
         <div class="popup-button seesource">
+          <a class='seeSource' href=''>
           <p>See Source</p>
           <i class="see-source"
             ><img
@@ -305,6 +318,7 @@ document.querySelector('.details-popup').innerHTML = `<div class="popup-containe
               src="./images/24_see_source.png"
               alt="seelive"
           /></i>
+          </a>
         </div>
       </div>
     </div>
