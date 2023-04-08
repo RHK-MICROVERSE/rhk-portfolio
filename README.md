@@ -66,7 +66,7 @@ You can [watch the loom video](https://www.loom.com/share/4679e5bb203e4d5aa4aea6
 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-[Live Demo Link](https://rhk-microverse.github.io/My-Portfolio/)
+[Live Demo Link](https://rhk-microverse.github.io/rhk-portfolio/)
 
 
 ## 💻 Getting Started <a name="getting-started"></a>
