@@ -212,6 +212,8 @@ function controlMobileMenu() {
         });
         technologiesList.innerHTML = el;
         // update the image of the popup
+        const seeLive = document.querySelector('.seeLive');
+        const seeSource = document.querySelector('.seeSource');
         document.querySelector('.img-snapshot-desktop').setAttribute('src', `${detail.img}`);
         document.querySelector('.img-snapshot-desktop').setAttribute('width', '400px');
         document.querySelector('.img-snapshot-desktop').setAttribute('height', '400px');
