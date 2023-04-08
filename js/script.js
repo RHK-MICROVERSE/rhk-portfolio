@@ -33,15 +33,13 @@ function controlMobileMenu() {
 
   const details = [
     {
-      img: './images/3A_background_for_main_program.png',
-      name: 'GLOBAL SUMMIT 2023',
+      img: './images/5_card-img.png',
+      name: 'Professional Art Printing Data-2',
       description:
-        '"A joyful celebration believing in the value of openness and sharing, creating a positive change with people from over 80 countries is taking place in October, in Korea.',
+        'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
       technologies: ['html', 'css', 'javascript'],
-      addDate: 'April 05, 2023',
-      projectId: 1,
-      seeLive: 'https://rhk-microverse.github.io/Conference/',
-      seeSource: 'https://github.com/RHK-MICROVERSE/Conference',
+      addDate: 'March 05, 2023',
+      projectId: 2,
     },
     {
       img: './images/5_card-img.png',
@@ -80,19 +78,21 @@ function controlMobileMenu() {
       projectId: 5,
     },
     {
-      img: './images/5_card-img.png',
-      name: 'Professional Art Printing Data-6',
+      img: './images/3A_background_for_main_program.png',
+      name: 'GLOBAL SUMMIT 2023',
       description:
-        'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
+        '"A <a href= "https://www.google.com">joyful</a> celebration believing in the value of openness and sharing, creating a positive change with people from over 80 countries is taking place in October, in Korea.',
       technologies: ['html', 'css', 'javascript'],
-      addDate: 'February 05, 2023',
+      addDate: 'April 05, 2023',
       projectId: 6,
+      seeLive: 'https://rhk-microverse.github.io/Conference/',
+      seeSource: 'https://github.com/RHK-MICROVERSE/Conference',
     },
     {
       img: './images/0_FontImage.png',
       name: 'To Do List',
       description:
-        'To-do list" is a Single Page Application that helps to organize daily task.It simply lists the things that one needs to do and allows one to mark them as complete. Built with Javascript, HTML, & CSS. Styled by <a href = "https://www.youtube.com/watch?v=AcUd-_Yjjqg"> Emilia Andrzejewska</a>.This SPA has been built and deployed using webpack.',
+        '"To-do list" is a Single Page Application that helps to organize daily task.It simply lists the things that one needs to do and allows one to mark them as complete. Built with Javascript, HTML, & CSS. Styled by <a href = "https://www.youtube.com/watch?v=AcUd-_Yjjqg">Emilia Andrzejewska</a>.This SPA has been built and deployed using webpack.',
       technologies: ['html', 'css', 'javascript'],
       addDate: 'January 01, 2023',
       projectId: 7,
@@ -142,7 +142,7 @@ function controlMobileMenu() {
   }
 
   // create cards dynamically for each project from  DETAILS array on page load
-  details.forEach((detail) => {
+  details.slice().reverse().forEach((detail) => {
     if (detail.projectId < details.length) {
       // create project sections (cards)
       const cardMaster = document.querySelector('#card-master');
@@ -222,8 +222,10 @@ function controlMobileMenu() {
         seeSource.setAttribute('href', `${detail.seeSource}`);
         // update the popup description text based on the projects card text
         const popupText = document.querySelector('#popup-text p');
-        popupText.textContent = '';
-        popupText.textContent = detail.description;
+        // console.log(popupText)
+        // popupText.textContent = 'test';
+        // popupText.textContent = detail.description;
+        popupText.innerHTML = `<p>${detail.description}</p>`;
       });
 
       // handle closing details popup
@@ -261,8 +263,9 @@ function controlMobileMenu() {
         seeSource.setAttribute('href', `${detail.seeSource}`);
         // update the popup description text based on the projects card text
         const popupText = document.querySelector('#popup-text p');
-        popupText.textContent = '';
-        popupText.textContent = detail.description;
+        // popupText.textContent = 'test';
+        // popupText.textContent = detail.description;
+        popupText.innerHTML = `<p>${detail.description}</p>`;
       });
     }
   });
@@ -302,25 +305,25 @@ document.querySelector('.details-popup').innerHTML = `<div class="popup-containe
       <div class="popup-buttons">
         <div class="popup-button seelive">
           <a class='seeLive' href=''>
-          <p>See Live</p>
+            <p>See Live</p>
+          </a>
           <i class="see-live"
             ><img
               class="popup-btn-img"
               src="./images/23_see_live.png"
               alt="seelive"
           /></i>
-          </a>
         </div>
         <div class="popup-button seesource">
           <a class='seeSource' href=''>
-          <p>See Source</p>
+            <p>See Source</p>
+          </a>
           <i class="see-source"
             ><img
               class="popup-btn-img"
               src="./images/24_see_source.png"
               alt="seelive"
           /></i>
-          </a>
         </div>
       </div>
     </div>
