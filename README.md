@@ -5,7 +5,7 @@
   <img src="./images/rhk-trading-logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>My Portfolio</b></h3>
+  <h3><b>rhk Portfolio</b></h3>
 
 </div>
 
@@ -35,7 +35,7 @@
 
 # 📖 Portfolio <a name="about-project"></a>
 
-> My Portfolio Page is a project initated in the first module first week of the Microverse program. The purpose of the project is to create a professional portfolio.
+> rhk Portfolio Page is a project initated in the first module first week of the Microverse program. The purpose of the project is to create a professional portfolio.
 
 
 ## 🛠 Walk through <a name="walk-through"></a>
@@ -70,7 +70,7 @@ You can [watch the loom video](https://www.loom.com/share/4679e5bb203e4d5aa4aea6
 
 
 ## 💻 Getting Started <a name="getting-started"></a>
-### Hi, there, I'm Rassel - aka [Full Stack Developer] [Check my portfolio](https://rhk-microverse.github.io/My-Portfolio/)
+### Hi, there, I'm Rassel - aka [Full Stack Developer] [Check my portfolio](https://rhk-microverse.github.io/rhk-portfolio/)
 
 > You can use this personal portfolio to show clients and programmers on project you worked on and you are currently working on.
 
@@ -101,7 +101,7 @@ No test are available
 
 ### Deployment
 
-This project is deployed at github pages you can clone it here. [Please click to clone](https://github.com/RHK-MICROVERSE/My-Portfolio)
+This project is deployed at github pages you can clone it here. [Please click to clone](https://github.com/RHK-MICROVERSE/rhk-portfolio)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -131,7 +131,7 @@ This project is deployed at github pages you can clone it here. [Please click to
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/RHK-MICROVERSE/My-Portfolio/issues).
+Feel free to check the [issues page](https://github.com/RHK-MICROVERSE/rhk-portfolio/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
